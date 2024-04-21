@@ -20,7 +20,7 @@ const Map = () => {
         const data = await response.json();
         const locationsWithPhotoUrl = data.data.map((location) => ({
           ...location,
-          photoUrl: `http://localhost:30080${location.attributes.photo?.data[0]?.attributes?.url}`,
+          photoUrl: `http://localhost:1337${location.attributes.photo?.data[0]?.attributes?.url}`,
         }));
         setLocations(locationsWithPhotoUrl);
         setFilteredLocations(locationsWithPhotoUrl);
