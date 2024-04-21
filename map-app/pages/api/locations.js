@@ -6,7 +6,7 @@ export default async (req, res) => {
     // Add authentication headers if required
     
 
-    const response = await axios.get('http://localhost:30080/api/locations?populate=photo');
+    const response = await axios.get('http://localhost:1337/api/locations?populate=photo');
     res.status(200).json(response.data);
   } catch (error) {
     console.error('Error fetching data:', error);
